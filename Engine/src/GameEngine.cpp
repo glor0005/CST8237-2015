@@ -26,7 +26,7 @@ void GameEngine::Initialize()
 
   IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF | IMG_INIT_WEBP);
 
-  InitializeImpl();
+  InitializeImpl(_renderer);
 
   /* Get the time at the beginning of our game loop so that we can track the
   * elapsed difference. */

@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(BOX2D);..\Engine\src;$(SDL)/include;$(SDL_image)/include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Marco\Documents\GitHub\CST8237-2015\External\Box2D_v2.3.0\Box2D;$(BOX2D);$(BOX2D2);..\Engine\src;$(SDL)/include;$(SDL_image)/include;$(IncludePath)</IncludePath>
     <LibraryPath>..\External\Box2D_v2.3.0\Box2D\Build\vs2012\bin\$(Configuration);$(BOX2D)\Build\vs2012\bin\$(Configuration);..\$(Configuration);$(SDL)/lib/x86;$(SDL_image)/lib/x86;$(LibraryPath)</LibraryPath>
     <SourcePath>$(BOX2D);$(SourcePath)</SourcePath>
   </PropertyGroup>
@@ -81,11 +81,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <Image Include="..\..\..\..\Downloads\Desktop\MechaTank01.png" />
+    <Image Include="..\..\..\..\Downloads\Desktop\MechaTank02.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Missile.h" />
+    <ClInclude Include="Player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Missile.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

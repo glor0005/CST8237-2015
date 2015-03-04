@@ -38,7 +38,7 @@ public:
 protected:
   GameEngine();
 
-  virtual void InitializeImpl() = 0;
+  virtual void InitializeImpl(SDL_Renderer * renderer) = 0;
   virtual void UpdateImpl(float dt) = 0;
   virtual void DrawImpl(SDL_Renderer *renderer, float dt) = 0;
 
